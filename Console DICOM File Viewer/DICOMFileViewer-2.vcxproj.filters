@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="VR Classes">
+      <UniqueIdentifier>{5a751da9-6e03-4b90-9681-e01b084c9eb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VR Classes\Type Elements">
+      <UniqueIdentifier>{4aa1cded-8545-47e3-b3c0-4666e5ba0ec5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{0f9ee554-9bc2-4518-b338-e57eeeb78fbe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VR Classes\AbstractDICOMDataElement.cpp">
+      <Filter>VR Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VR Classes\Type Elements\ByteElement.cpp">
+      <Filter>VR Classes\Type Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsolePrinter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Common\DICOMFile.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\VR Classes\AbstractDICOMDataElement.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\AE_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\AS_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\AT_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\CommonElementData.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\CS_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\DA_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\DICOMElementFabric.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\DS_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\DT_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\FD_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\FL_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\IS_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\LO_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\LT_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\OB_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\OD_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\OF_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\OL_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\OW_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\PN_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\SH_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\SL_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\SQ_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\SS_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\ST_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\TM_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\UC_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\UI_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\UL_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\UN_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\UR_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\US_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\UT_Element.h">
+      <Filter>VR Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\Type Elements\ByteElement.h">
+      <Filter>VR Classes\Type Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\Type Elements\DoubleElement.h">
+      <Filter>VR Classes\Type Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\Type Elements\FloatElement.h">
+      <Filter>VR Classes\Type Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\Type Elements\SignedIntElement.h">
+      <Filter>VR Classes\Type Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\Type Elements\StringElement.h">
+      <Filter>VR Classes\Type Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VR Classes\Type Elements\UnsignedIntElement.h">
+      <Filter>VR Classes\Type Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsolePrinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\DICOMFile.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Common\DICOMTag.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
