@@ -124,8 +124,11 @@ void ConsolePrinter::PrintElements(std::vector<AbstractDICOMDataElement*> elemen
 {
 	for(int i = 0; i < elements.size(); ++i)
 	{
-		PrintElement(elements[i]);
+		if(!elements[i]->IsValid())
+			printf("*");
 
+		PrintElement(elements[i]);
+		
 		if(elements[i]->GetValueRepresentation() == MC_VR::SQ)
 		{
 			_isSQ = true;

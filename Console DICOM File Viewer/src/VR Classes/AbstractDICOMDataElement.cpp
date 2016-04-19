@@ -6,6 +6,7 @@ AbstractDICOMDataElement::AbstractDICOMDataElement()
 	_data.valueRepresentationString = "UNKNOWN_VR";
 	_data.numberOfValues = 0;
 	_data.description[0] = 0;
+	_isValid = true;
 }
 
 AbstractDICOMDataElement::~AbstractDICOMDataElement()
@@ -42,4 +43,9 @@ int AbstractDICOMDataElement::GetNumberOfValues() const
 const char* AbstractDICOMDataElement::GetDescription() const
 {
 	return _data.description;
+}
+
+bool AbstractDICOMDataElement::IsValid() const
+{
+	return _isValid;
 }

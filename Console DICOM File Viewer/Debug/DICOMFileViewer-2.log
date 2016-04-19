@@ -1,5 +1,30 @@
-﻿Build started 19.04.2016 12:26:51.
+﻿Build started 19.04.2016 19:52:16.
+     1>Project "D:\Work\!Fulcrum\Project\Console DICOM File Viewer\DICOMFileViewer-2.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Programs\VisualStudio 2012\VC\bin\CL.exe /c /I"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\\src\Common" /I"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\\src\VR Classes\Type Elements" /I"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\\src\VR Classes" /I"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\\External\mc3inc" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt src\Common\DICOMFile.cpp
+         DICOMFile.cpp
+     1>d:\work\!fulcrum\project\console dicom file viewer\src\vr classes\type elements\stringelement.h(26): warning C4390: ';' : empty controlled statement found; is this the intent?
+     1>d:\work\!fulcrum\project\console dicom file viewer\src\vr classes\type elements\stringelement.h(61): warning C4101: 'status' : unreferenced local variable
+     1>d:\work\!fulcrum\project\console dicom file viewer\src\common\dicomfile.cpp(22): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programs\visualstudio 2012\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>d:\work\!fulcrum\project\console dicom file viewer\src\common\dicomfile.cpp(42): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\work\!fulcrum\project\console dicom file viewer\src\common\dicomfile.cpp(154): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programs\visualstudio 2012\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\work\!fulcrum\project\console dicom file viewer\src\common\dicomfile.cpp(163): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\work\!fulcrum\project\console dicom file viewer\src\common\dicomfile.cpp(178): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\work\!fulcrum\project\console dicom file viewer\src\common\dicomfile.cpp(193): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\work\!fulcrum\project\console dicom file viewer\src\common\dicomfile.cpp(210): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\work\!fulcrum\project\console dicom file viewer\src\common\dicomfile.cpp(227): warning C4018: '<' : signed/unsigned mismatch
+     1>d:\work\!fulcrum\project\console dicom file viewer\src\common\dicomfile.cpp(155): warning C4715: 'DICOMFile::_InitializeElementData' : not all control paths return a value
+       Link:
+         D:\Programs\VisualStudio 2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\Debug\DICOMFileViewer-2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\\External\mc3lib" mc3adlld.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\Debug\DICOMFileViewer-2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\Debug\DICOMFileViewer-2.lib" /MACHINE:X86 Debug\ConsolePrinter.obj
+         Debug\main.obj
+         Debug\DICOMFile.obj
+         Debug\AbstractDICOMDataElement.obj
+         Debug\ByteElement.obj
+         DICOMFileViewer-2.vcxproj -> D:\Work\!Fulcrum\Project\Console DICOM File Viewer\Debug\DICOMFileViewer-2.exe
+     1>Done Building Project "D:\Work\!Fulcrum\Project\Console DICOM File Viewer\DICOMFileViewer-2.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.01
+Time Elapsed 00:00:02.48

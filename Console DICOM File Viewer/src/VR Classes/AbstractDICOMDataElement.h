@@ -13,6 +13,9 @@ protected:
 	CommonElementData _data; 
 
 public:
+	bool _isValid;
+
+public:
 	AbstractDICOMDataElement();
 	virtual ~AbstractDICOMDataElement();
 
@@ -23,4 +26,5 @@ public:
 	std::string  GetValueRepresentationString() const;
 	int			 GetNumberOfValues() const;
 	const char*  GetDescription() const;
+	bool		 IsValid() const;
 };

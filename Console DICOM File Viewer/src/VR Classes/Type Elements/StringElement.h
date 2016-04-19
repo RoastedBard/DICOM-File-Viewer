@@ -19,8 +19,10 @@ private:
 			throw std::runtime_error("ERROR: Failed to get string value length.\n");
 
 		/* Trim values to specified in derived class length 'valueSize', if it's not an unlimited type of text */
-		if(bufferLength > _valueSize && _data.valueRepresentation != MC_VR::UC && _data.valueRepresentation != MC_VR::UR && _data.valueRepresentation != MC_VR::UT)
-			bufferLength = _valueSize;
+		//if(bufferLength > _valueSize && _data.valueRepresentation != MC_VR::UC && _data.valueRepresentation != MC_VR::UR && _data.valueRepresentation != MC_VR::UT)
+			//bufferLength = _valueSize;
+			//_isValid = false;
+				//;
 	}
 
 	void _GetStringValue(int messageId, unsigned long bufferLength, char* buffer, bool multipleValues)
