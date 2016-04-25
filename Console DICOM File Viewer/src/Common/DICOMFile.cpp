@@ -70,8 +70,6 @@ void DICOMFile::OpenFile(char *filename, int applicationId)
 
 	MC_STATUS status = MC_Open_File(applicationId, _fileId, this, MediaToFile);
 
-	status = MC_File_To_Message(_fileId);
-
 	if(status != MC_NORMAL_COMPLETION)
 		throw std::invalid_argument("ERROR: Failed to open file.\n");
 

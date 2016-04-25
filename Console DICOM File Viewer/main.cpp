@@ -76,7 +76,7 @@ int main()
 		DICOMFile dicomFile;
 
 		/* Read data from file */
-		dicomFile.OpenFile("dicom_TestFiles/CT-MONO2-16-brain", applicationId);
+		dicomFile.OpenFile("dicom_TestFiles/MG1_JPLY", applicationId);
 
 		/* Print data */
 		ConsolePrinter::PrintElements(dicomFile.GetElements());
