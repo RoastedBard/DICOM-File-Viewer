@@ -42,7 +42,10 @@ void DICOMFile::_DeleteElements(std::vector<AbstractDICOMDataElement*>& elements
 	for(int i = 0; i < elements.size(); ++i)
 	{
 		if(elements[i]->GetValueRepresentation() == SQ)
-			_DeleteElements(static_cast<SQ_Element*>(elements[i])->sqAttributes);
+		{
+			for(int j = 0; j < static_cast<SQ_Element*>(elements[i])->sqAttributes.size(); ++j)
+				_DeleteElements(static_cast<SQ_Element*>(elements[i])->sqAttributes[j]);
+		}
 
 		delete elements[i];
 	}
@@ -105,6 +108,12 @@ MC_STATUS DICOMFile::_ExtractElementInfo(int messageId, std::vector<AbstractDICO
 
 	MC_STATUS status = _InitializeElementData(messageId, data);
 
+	if(status == MC_INVALID_MESSAGE_ID)
+		throw std::invalid_argument("ERROR: Invalid message ID.\n");
+
+	if(status == MC_MESSAGE_EMPTY)
+		throw std::runtime_error("ERROR: Message is Empty");
+
 	if(status == MC_NO_MORE_ATTRIBUTES || status == MC_NO_MORE_VALUES)
 		return status;
 
@@ -114,14 +123,19 @@ MC_STATUS DICOMFile::_ExtractElementInfo(int messageId, std::vector<AbstractDICO
 
 	element->GetValues(messageId);
 
-	VAL_ERR *valErr;
-	status = MC_Validate_Attribute(messageId, element->GetTag().tag, &valErr, VAL_LEVEL::Validation_Level3);
-	if(status == MC_DOES_NOT_VALIDATE)
-		element->_isValid = false;
-
 	if(element->GetValueRepresentation() == SQ)
 	{
-		_FetchElements(static_cast<SQ_Element*>(element)->value, static_cast<SQ_Element*>(element)->sqAttributes);
+		for(int i = 0; i < static_cast<SQ_Element*>(element)->values.size(); ++i)
+		{
+			if(static_cast<SQ_Element*>(element)->values[i] == 0)
+				continue;
+
+			std::vector<AbstractDICOMDataElement*> item;
+			static_cast<SQ_Element*>(element)->sqAttributes.push_back(item);
+
+			_FetchElements(static_cast<SQ_Element*>(element)->values[i], static_cast<SQ_Element*>(element)->sqAttributes.back());
+		}
+
 		elements.push_back(element);
 	}
 	else
@@ -135,20 +149,14 @@ MC_STATUS DICOMFile::_InitializeElementData(int messageId, CommonElementData& da
 	unsigned long tag;
 	MC_STATUS status = MC_Get_Next_Attribute(messageId, &tag, &data.valueRepresentation, &data.numberOfValues);
 
-	if(status == MC_INVALID_MESSAGE_ID)
-		throw std::invalid_argument("ERROR: Invalid message ID.\n");
-
-	if(status == MC_MESSAGE_EMPTY)
-		throw std::runtime_error("ERROR: Message is Empty");
-
-	if(status == MC_NO_MORE_ATTRIBUTES || status == MC_NO_MORE_VALUES)
+	if(status == MC_NO_MORE_ATTRIBUTES || status == MC_NO_MORE_VALUES || status == MC_MESSAGE_EMPTY || status == MC_INVALID_MESSAGE_ID)
 		return status;
 
 	data.tag.InitializeTag(tag);
 
-	MC_Get_Tag_Info(data.tag.tag, data.description, 128);
+	status = MC_Get_Tag_Info(data.tag.tag, data.description, 128);
 
-	if(data.description[0] == 0)
+	if(data.description[0] == 0 || status == MC_INVALID_TAG)
 		strcpy(data.description, "[Unknown Element]");
 }
 

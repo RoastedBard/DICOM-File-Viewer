@@ -82,15 +82,16 @@ void ConsolePrinter::PrintValues(AbstractDICOMDataElement* element)
 		}
 	case SQ:
 		{
-			SQ_Element *sqEl = static_cast<SQ_Element*>(element);
-			printf("%d", sqEl->value);
+			//SQ_Element *sqEl = static_cast<SQ_Element*>(element);
+			//for(int i = 0; i < sqEl->GetNumberOfValues(); ++i)
+			//printf("%d", sqEl->values[i]);
 			break; 
 		}
 	case AT:
 		{
 			AT_Element* atEl = static_cast<AT_Element*>(element);
 			for(int i = 0; i < atEl->values.size(); ++i)
-				printf("(%s,%s) ", atEl->values[i].group, atEl->values[i].element);
+				printf("(%s,%s) ", atEl->values[i].group.c_str(), atEl->values[i].element.c_str());
 			break;
 		}
 
@@ -120,19 +121,24 @@ void ConsolePrinter::PrintElement(AbstractDICOMDataElement* element)
 	printf(" >\n");
 }
 
+void ConsolePrinter::PrintSQ(SQ_Element* rootElement)
+{
+	for(int j = 0; j < rootElement->sqAttributes.size(); ++j)
+	{
+		PrintElements(rootElement->sqAttributes[j]);
+	}
+}
+
 void ConsolePrinter::PrintElements(std::vector<AbstractDICOMDataElement*> elements)
 {
 	for(int i = 0; i < elements.size(); ++i)
 	{
-		if(!elements[i]->IsValid())
-			printf("*");
-
 		PrintElement(elements[i]);
-		
+
 		if(elements[i]->GetValueRepresentation() == MC_VR::SQ)
 		{
 			_isSQ = true;
-			PrintElements(static_cast<SQ_Element*>(elements[i])->sqAttributes);
+			PrintSQ(static_cast<SQ_Element*>(elements[i]));
 			_isSQ = false;
 		}
 	}

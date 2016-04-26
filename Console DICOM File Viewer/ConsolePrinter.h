@@ -19,4 +19,5 @@ public:
 	static void PrintValues(AbstractDICOMDataElement* element);
 	static void PrintElement(AbstractDICOMDataElement* element);
 	static void PrintElements(std::vector<AbstractDICOMDataElement*> elements);
+	static void PrintSQ(SQ_Element* rootElement);
 };

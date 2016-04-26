@@ -87,6 +87,11 @@
     <ClCompile Include="src\Common\DICOMFile.cpp" />
     <ClCompile Include="src\VR Classes\AbstractDICOMDataElement.cpp" />
     <ClCompile Include="src\VR Classes\Type Elements\ByteElement.cpp" />
+    <ClCompile Include="src\VR Classes\Type Elements\DoubleElement.cpp" />
+    <ClCompile Include="src\VR Classes\Type Elements\FloatElement.cpp" />
+    <ClCompile Include="src\VR Classes\Type Elements\SignedIntElement.cpp" />
+    <ClCompile Include="src\VR Classes\Type Elements\StringElement.cpp" />
+    <ClCompile Include="src\VR Classes\Type Elements\UnsignedIntElement.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsolePrinter.h" />

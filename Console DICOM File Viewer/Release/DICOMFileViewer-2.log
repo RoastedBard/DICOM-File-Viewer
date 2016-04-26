@@ -1,5 +1,42 @@
-﻿Build started 25.04.2016 20:54:05.
+﻿Build started 26.04.2016 12:13:03.
+     1>Project "D:\Work\!Fulcrum\Project\Console DICOM File Viewer\DICOMFileViewer-2.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Programs\VisualStudio 2012\VC\bin\CL.exe /c /I"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\\src\Common" /I"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\\src\VR Classes\Type Elements" /I"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\\src\VR Classes" /I"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\\External\mc3inc" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ConsolePrinter.cpp main.cpp src\Common\DICOMFile.cpp "src\VR Classes\AbstractDICOMDataElement.cpp" "src\VR Classes\Type Elements\ByteElement.cpp"
+         ConsolePrinter.cpp
+     1>D:\Work\!Fulcrum\Project\Console DICOM File Viewer\src\VR Classes\Type Elements\StringElement.h(61): warning C4101: 'status' : unreferenced local variable
+     1>ConsolePrinter.cpp(79): warning C4018: '<' : signed/unsigned mismatch
+     1>ConsolePrinter.cpp(92): warning C4018: '<' : signed/unsigned mismatch
+     1>ConsolePrinter.cpp(125): warning C4018: '<' : signed/unsigned mismatch
+         main.cpp
+     1>D:\Work\!Fulcrum\Project\Console DICOM File Viewer\src\VR Classes\Type Elements\StringElement.h(61): warning C4101: 'status' : unreferenced local variable
+         DICOMFile.cpp
+     1>D:\Work\!Fulcrum\Project\Console DICOM File Viewer\src\VR Classes\Type Elements\StringElement.h(61): warning C4101: 'status' : unreferenced local variable
+     1>src\Common\DICOMFile.cpp(22): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 D:\Programs\VisualStudio 2012\VC\include\stdio.h(218) : see declaration of 'fopen'
+     1>src\Common\DICOMFile.cpp(42): warning C4018: '<' : signed/unsigned mismatch
+     1>src\Common\DICOMFile.cpp(152): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 D:\Programs\VisualStudio 2012\VC\include\string.h(110) : see declaration of 'strcpy'
+     1>src\Common\DICOMFile.cpp(161): warning C4018: '<' : signed/unsigned mismatch
+     1>src\Common\DICOMFile.cpp(176): warning C4018: '<' : signed/unsigned mismatch
+     1>src\Common\DICOMFile.cpp(191): warning C4018: '<' : signed/unsigned mismatch
+     1>src\Common\DICOMFile.cpp(208): warning C4018: '<' : signed/unsigned mismatch
+     1>src\Common\DICOMFile.cpp(225): warning C4018: '<' : signed/unsigned mismatch
+         AbstractDICOMDataElement.cpp
+     1>src\VR Classes\AbstractDICOMDataElement.cpp(18): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 D:\Programs\VisualStudio 2012\VC\include\string.h(110) : see declaration of 'strcpy'
+         ByteElement.cpp
+       Link:
+         D:\Programs\VisualStudio 2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\Release\DICOMFileViewer-2.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\\External\mc3lib" mc3adll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\Release\DICOMFileViewer-2.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Work\!Fulcrum\Project\Console DICOM File Viewer\Release\DICOMFileViewer-2.lib" /MACHINE:X86 /SAFESEH Release\ConsolePrinter.obj
+         Release\main.obj
+         Release\DICOMFile.obj
+         Release\AbstractDICOMDataElement.obj
+         Release\ByteElement.obj
+         Generating code
+     1>d:\work\!fulcrum\project\console dicom file viewer\src\common\dicomfile.cpp(153): warning C4715: 'DICOMFile::_InitializeElementData' : not all control paths return a value
+         Finished generating code
+         DICOMFileViewer-2.vcxproj -> D:\Work\!Fulcrum\Project\Console DICOM File Viewer\Release\DICOMFileViewer-2.exe
+     1>Done Building Project "D:\Work\!Fulcrum\Project\Console DICOM File Viewer\DICOMFileViewer-2.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.04
+Time Elapsed 00:00:10.14

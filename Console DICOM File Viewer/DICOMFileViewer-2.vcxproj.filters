@@ -39,6 +39,21 @@
     <ClCompile Include="src\Common\DICOMFile.cpp">
       <Filter>Common</Filter>
     </ClCompile>
+    <ClCompile Include="src\VR Classes\Type Elements\StringElement.cpp">
+      <Filter>VR Classes\Type Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VR Classes\Type Elements\SignedIntElement.cpp">
+      <Filter>VR Classes\Type Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VR Classes\Type Elements\DoubleElement.cpp">
+      <Filter>VR Classes\Type Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VR Classes\Type Elements\FloatElement.cpp">
+      <Filter>VR Classes\Type Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VR Classes\Type Elements\UnsignedIntElement.cpp">
+      <Filter>VR Classes\Type Elements</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\VR Classes\AbstractDICOMDataElement.h">

@@ -83,7 +83,6 @@ int main()
 
 		/* Search for element */
 		TEST_ElementSearch(dicomFile);
-
 	}
 	catch(std::invalid_argument ex)
 	{
